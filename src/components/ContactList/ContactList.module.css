@@ -1,0 +1,17 @@
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.contactItem {
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  width: 300px;
+  box-shadow: 0 1px 6px 0 rgba(237, 236, 240, 1),
+    0 1px 1px 0 rgba(118, 58, 245, 1), 0 2px 1px 0 rgba(134, 130, 141, 1);
+}

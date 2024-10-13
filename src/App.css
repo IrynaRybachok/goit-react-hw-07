@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  padding-bottom: 40px;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.containerPhonebook {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 2px solid rgba(10, 13, 23, 0.05);
+  padding: 40px 135px;
+}
+
+.infoText {
+  color: white;
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}

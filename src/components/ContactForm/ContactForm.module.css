@@ -1,0 +1,75 @@
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 35px;
+}
+
+.wrapInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.formLabel{
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    margin-right: 5px;
+}
+
+.formInput{
+    height: 30px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+
+.formInputError{
+    color:rgb(160, 4, 4);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.15px;
+}
+
+.formBtn{
+    border-radius: 5px;
+    background: linear-gradient(90deg, #763AF5 0%, #A604F2 117.18%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    padding: 5px 8px;
+    color: white;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formBtn:hover{
+    background:  linear-gradient(90deg, #6326e8c9 0%, #8204bd 117.18%);
+}

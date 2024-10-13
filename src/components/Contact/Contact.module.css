@@ -1,0 +1,56 @@
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactData {
+  text-align: left;
+}
+
+.contactName {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.779);
+  font-family: Inter;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.contactPhone {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.779);
+  font-family: Inter;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contactBtnDelete {
+  border-radius: 5px;
+  background: linear-gradient(90deg, #763af5 0%, #a604f2 117.18%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  padding: 5px 8px;
+
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactBtnDelete:hover {
+  background: linear-gradient(90deg, #6326e8c9 0%, #8204bd 117.18%);
+}
