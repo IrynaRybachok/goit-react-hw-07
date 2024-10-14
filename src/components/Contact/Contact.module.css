@@ -4,7 +4,13 @@
 }
 
 .contactData {
+  max-width: 200px;
   text-align: left;
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
 }
 
 .contactName {
@@ -12,6 +18,7 @@
   justify-content: start;
   align-items: center;
   gap: 7px;
+
   color: rgba(255, 255, 255, 0.779);
   font-family: Inter;
   line-height: normal;
@@ -34,12 +41,14 @@
 }
 
 .contactBtnDelete {
+  position: relative;
+
   border-radius: 5px;
   background: linear-gradient(90deg, #763af5 0%, #a604f2 117.18%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 100px;
   height: 30px;
   padding: 5px 8px;
 
@@ -48,9 +57,43 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contactBtnDelete span,
+.contactBtnDelete .iconDelete {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.contactBtnDelete span {
+  right: 10px;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.contactBtnDelete .iconDelete {
+  left: 10px;
+  font-size: 20px;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 .contactBtnDelete:hover {
+  opacity: 0.9;
   background: linear-gradient(90deg, #6326e8c9 0%, #8204bd 117.18%);
+}
+
+.contactBtnDelete:hover span {
+  right: -50%;
+  opacity: 0;
+}
+
+.contactBtnDelete:hover .iconDelete {
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -12,7 +12,7 @@ const Contact = ({ data: { id, name, number } }) => {
     <div className={s.contactContainer}>
       <div className={s.contactData}>
         <h2 className={s.contactName}>
-          <IoMdContact size="20" /> {name}
+          <IoMdContact size="20" className={s.icon} /> {name}
         </h2>
         <p className={s.contactPhone}>
           <FaPhoneSquareAlt size="20" /> {number}
@@ -22,7 +22,8 @@ const Contact = ({ data: { id, name, number } }) => {
         className={s.contactBtnDelete}
         onClick={() => dispatch(deleteContact(id))}
       >
-        <MdDelete size="20" /> Delete
+        <MdDelete size="20" className={s.iconDelete} />
+        <span className={s.btnDelete}>Delete</span>
       </button>
     </div>
   );

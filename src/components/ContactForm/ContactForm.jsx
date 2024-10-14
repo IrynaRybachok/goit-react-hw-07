@@ -1,11 +1,14 @@
 import s from "./ContactForm.module.css";
 import { Field, Formik, Form, ErrorMessage } from "formik";
-import { useId } from "react";
+import { useId, useState } from "react";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsOps";
+import { IoMdCheckmark } from "react-icons/io";
 
 const ContactForm = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const [isValidated, setIsValidated] = useState(false);
   const nameFildId = useId();
   const numberFildId = useId();
   const initialValues = {
@@ -28,8 +31,19 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values));
-    actions.resetForm();
+    setIsClicked(true);
+    dispatch(addContact(values)).then(() => {
+      setTimeout(() => {
+        setIsClicked(false);
+        setIsValidated(true);
+        actions.resetForm();
+
+        setTimeout(() => {
+          setIsValidated(false);
+        }, 2000);
+      }),
+        2000;
+    });
   };
 
   return (
@@ -72,8 +86,20 @@ const ContactForm = () => {
             component="span"
           />
         </div>
-        <button className={s.formBtn} type="submit">
-          Add contact
+        <button
+          className={`${s.formBtn} ${isClicked ? s.onclic : ""} ${
+            isValidated ? s.validate : ""
+          }`}
+          type="submit"
+          disabled={isClicked || isValidated}
+        >
+          {isClicked ? (
+            ""
+          ) : isValidated ? (
+            <IoMdCheckmark size="24" />
+          ) : (
+            "Add contact"
+          )}
         </button>
       </Form>
     </Formik>
