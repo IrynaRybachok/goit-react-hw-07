@@ -36,7 +36,23 @@
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
-  color: white;
+  color: #fff;
+  outline: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.formInput:autofill {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.formInput:autofill,
+.formInput:autofill:hover,
+.formInput:autofill:focus,
+.formInput:autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 .formInputError {
